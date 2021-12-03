@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" style="-fx-background-color: #c8c8a9;" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.essohpee.randomnumbergenerator.RandomNumberGeneratorController">
+    <AnchorPane prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #83af9b;">
+        <Label layoutX="146.0" layoutY="10.0" text="Random Number Generator">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
+    <GridPane layoutX="120.0" layoutY="121.0" prefHeight="90.0" prefWidth="369.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="107.66668701171875"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.33331298828125" minWidth="10.0"
+                               prefWidth="262.33331298828125"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="36.666656494140625" minHeight="10.0" prefHeight="36.666656494140625"
+                            vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="25.333343505859375" minHeight="10.0" prefHeight="16.666656494140625"
+                            vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="37.33334350585937" minHeight="10.0" prefHeight="37.33334350585937"
+                            vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Label text="Minimun:  ">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <Label layoutX="10.0" layoutY="17.0" text="Maximun:  " GridPane.rowIndex="2">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="MinTextField" prefHeight="35.0" prefWidth="262.0" promptText="Enter number"
+                   GridPane.columnIndex="1">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="MaxTextField" layoutX="117.0" layoutY="13.0" prefHeight="35.0" prefWidth="262.0"
+                   promptText="Enter number" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </TextField>
+    </GridPane>
+    <JFXButton buttonType="RAISED" layoutX="278.0" layoutY="236.0" onAction="#GenerateAction" prefHeight="50.0"
+               prefWidth="159.0" style="-fx-background-color: #83af9b;" text="Generate" textFill="WHITE">
+        <font>
+          <Font size="23.0"/>
+        </font>
+    </JFXButton>
+    <GridPane layoutX="120.0" layoutY="296.0" prefHeight="90.0" prefWidth="369.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.33331298828125" minWidth="10.0"
+                               prefWidth="110.33331298828125"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.3333536783854" minWidth="10.0"
+                               prefWidth="258.3333536783854"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="25.333343505859375" minHeight="10.0" prefHeight="21.333343505859375"
+                            vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="38.666656494140625" minHeight="10.0" prefHeight="38.666656494140625"
+                            vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Label text="Result:" GridPane.rowIndex="1">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="ResultField" alignment="CENTER" editable="false" prefHeight="35.0" prefWidth="259.0"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </TextField>
+    </GridPane>
+</AnchorPane>
